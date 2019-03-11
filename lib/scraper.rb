@@ -25,7 +25,6 @@ class Scraper
     student = {}
     container = profile_doc.css("div.social-icon-container a").collect{|icon| icon.attribute("href").value}
       container.each do |link|
-           binding.pry
         if link.include?("twitter")
           student[:twitter] = link
         elsif link.include?("linkedin")
